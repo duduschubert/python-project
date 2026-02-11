@@ -23,35 +23,31 @@ def calculadora ():
            
             numero = input('Digite o valor: ')
             numero_dois = input('Digite o segundo valor: ')
-            numero_int = int(numero)
-            numero_dois_int = int(numero_dois)
+            numero_float = float(numero)
+            numero_dois_float = float(numero_dois)
            
-                
+            print('Realizando o cálculo...')   
+            
             if operacao == 1:
-                resultado = numero_int + numero_dois_int
-                print(f'Seu resultado foi: {resultado}')
-                        
+                print(f'Resultado:', numero_float + numero_dois_float)
+                                        
             elif operacao == 2:
-                resultado = numero_int - numero_dois_int
-                print(f'Seu resultado foi: {resultado}')
-                
+                print(f'Resultado:', numero_float - numero_dois_float) 
+                                
             elif operacao == 3:
-                resultado = numero_int * numero_dois_int
-                print(f'Seu resultado foi: {resultado}')
+                print(f'Resultado:', numero_float * numero_dois_float)
 
             elif operacao == 4:
-                
                 try:
-                    resultado = numero_int / numero_dois_int
-                    print(f'Seu resultado foi: {resultado}')
-                
+                    print(f'Resultado:', numero_float / numero_dois_float)
+                           
                 except ZeroDivisionError:
                     print('Divisão por zero é impossível')
-                    continue     
-                
+                    continue        
+           
             elif operacao == 5:
-                resultado = numero_int ** numero_dois_int
-                print(f'Seu resultado foi: {resultado}')
+                print(numero_float ** numero_dois_float)
+                
                         
             else: 
                 print('Operação inválida')
