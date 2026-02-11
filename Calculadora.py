@@ -29,24 +29,24 @@ def calculadora ():
             print('Realizando o cálculo...')   
             
             if operacao == 1:
-                print(f'Resultado:', numero_float + numero_dois_float)
+                print(f'{numero_float} + {numero_dois_float} =', numero_float + numero_dois_float)
                                         
             elif operacao == 2:
-                print(f'Resultado:', numero_float - numero_dois_float) 
+                print(f'{numero_float} - {numero_dois_float} =', numero_float - numero_dois_float) 
                                 
             elif operacao == 3:
-                print(f'Resultado:', numero_float * numero_dois_float)
+                print(f'{numero_float} * {numero_dois_float} =', numero_float * numero_dois_float)
 
             elif operacao == 4:
                 try:
-                    print(f'Resultado:', numero_float / numero_dois_float)
+                    print(f'{numero_float} / {numero_dois_float} =', numero_float / numero_dois_float)
                            
                 except ZeroDivisionError:
                     print('Divisão por zero é impossível')
                     continue        
            
             elif operacao == 5:
-                print(numero_float ** numero_dois_float)
+                print(f'{numero_float} ** {numero_dois_float} =', numero_float ** numero_dois_float)
                 
                         
             else: 
