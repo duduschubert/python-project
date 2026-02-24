@@ -1,35 +1,50 @@
-cpf = '74682489070'
-nove_digitos = cpf[:9]
 
-contador = 10
-resultado = 0
+# entrada = input('Digite aqui seu CPF: ')
+# cpf = re.sub(
+#     r'[^0-9]',
+#     '',
+#     entrada
+#     )
+# entrada_sequencia = entrada == entrada[0] * len(entrada)
 
-for numero in nove_digitos:
-    resultado += (int(numero) * contador) 
-    contador -= 1
+# if entrada_sequencia:
+#     print('Você enviou dados sequenciais.')
+#     sys.exit()
 
-digito_1 = (resultado * 10) % 11
-digito_1 = digito_1 if digito_1 <= 9 else 0
+import re
+import sys
+import random
 
-dez_cpf = nove_digitos + str(digito_1)
+for _ in range(100):
 
-contador2 = 11
-resultado2 = 0
+    nove_digitos = ''
 
-for numero in dez_cpf:
-    resultado2 += (int(numero) * contador2) 
-    contador2 -= 1
+    for i in range(9):
+        nove_digitos += str(random.randint(0, 9))
 
-digito_2 = (resultado2 * 10) % 11
-digito_2 = digito_2 if digito_2 <= 9 else 0
+    contador = 10
+    resultado = 0
 
-print(digito_1)
-print(digito_2)
+    for numero in nove_digitos:
+        resultado += (int(numero) * contador) 
+        contador -= 1
 
-novo_cpf = f'{nove_digitos}{digito_1}{digito_2}'
+    digito_1 = (resultado * 10) % 11
+    digito_1 = digito_1 if digito_1 <= 9 else 0
 
-if cpf == novo_cpf:
-    print('Seu CPF é válido')
+    dez_cpf = nove_digitos + str(digito_1)
 
-else:
-    print('CPF inválido')
+    contador2 = 11
+    resultado2 = 0
+
+    for numero in dez_cpf:
+        resultado2 += int(numero) * contador2
+        contador2 -= 1
+
+    digito_2 = (resultado2 * 10) % 11
+    digito_2 = digito_2 if digito_2 <= 9 else 0
+
+
+    cpf_gerado = f'{nove_digitos}{digito_1}{digito_2}'
+
+    print(cpf_gerado)
