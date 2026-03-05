@@ -15,7 +15,7 @@ import re
 import sys
 import random
 
-for _ in range(100):
+for _ in range(2):
 
     nove_digitos = ''
 
@@ -48,3 +48,4 @@ for _ in range(100):
     cpf_gerado = f'{nove_digitos}{digito_1}{digito_2}'
 
     print(cpf_gerado)
+

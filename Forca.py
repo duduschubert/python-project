@@ -1,6 +1,7 @@
 #EXERCÍCIO FORCA
 import os
 
+
 def menu_letras():
     print(5*'-'+'FORCA'+ 5*'-')
     letra_digitada = input('Digite uma letra: ').lower()
@@ -30,7 +31,7 @@ def atualizar_palavra(palavra_secreta, letras_acertadas):
     return palavra_formada   
     
 def jogo():
-    palavra_secreta = 'acoplado'
+    palavra_secreta = ''
     tentativas = 0
     letras_acertadas = ''
 
